@@ -200,7 +200,7 @@ col_mode, col_pad = st.columns([2, 1])
 with col_mode:
     mode = st.selectbox("Workflow Mode", ["Auto-Detect (Smart)", "Standard Mode", "Slitlamp Mode"])
 
-uploaded_files = st.file_uploader("", type=['jpg', 'png', 'jpeg'], accept_multiple_files=True)
+uploaded_files = st.file_uploader("Upload Eye Images", type=['jpg', 'png', 'jpeg'], accept_multiple_files=True, label_visibility="collapsed")
 
 if uploaded_files:
     if 'results' not in st.session_state:
